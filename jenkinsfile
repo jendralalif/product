@@ -1,5 +1,5 @@
 pipeline {
-
+    agent any
     tools {
         jdk 'Java17'
         maven 'Maven3'
@@ -14,7 +14,7 @@ pipeline {
 
             stage("Checkout from SCM"){
                     steps {
-                        git branch: 'main', credentialsId: 'github', url: 'https://github.com/jendralalif/product'
+                        git branch: 'main', credentialsId: 'gth', url: 'https://github.com/jendralalif/product'
                     }
             }
 
